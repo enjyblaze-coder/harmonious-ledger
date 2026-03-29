@@ -58,33 +58,7 @@
         <p class="font-headline font-bold text-primary text-sm tracking-wide">Sincronizando Nube...</p>
     </div>
 
-    <!-- NUBE SETUP MODAL (If no config) -->
-    <div id="firebase-setup-modal" class="fixed inset-0 z-[200] bg-white flex flex-col items-center justify-center p-6 hidden overflow-y-auto">
-        <div class="max-w-md w-full py-10 space-y-6">
-            <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-primary mx-auto mb-2"><span class="material-symbols-outlined text-3xl">cloud_sync</span></div>
-            <h2 class="font-headline font-extrabold text-2xl text-primary text-center">Conectar Nube Compartida</h2>
-            <p class="text-sm text-gray-500 text-center px-4">Para que tú y tu esposa vean la misma información en tiempo real, esta app necesita conectarse a una base de datos gratuita de Google Firebase.</p>
-            <div class="bg-gray-50 p-5 rounded-2xl text-xs text-gray-600 border border-gray-100 font-mono leading-relaxed shadow-inner">
-                <span class="font-bold text-primary">INSTRUCCIONES:</span><br>
-                1. Ve a console.firebase.google.com<br>
-                2. Crea un proyecto nuevo y añade una "App Web" (etiqueta &lt;/&gt;).<br>
-                3. Activa <b>Firestore Database</b> y pon sus reglas en <b>Modo de Prueba</b> (Test Mode).<br>
-                4. Copia el código `firebaseConfig` que te dará Google y pégalo completo aquí abajo:
-            </div>
-            <textarea id="firebase-config-input" rows="8" class="w-full border border-gray-200 rounded-2xl p-4 text-xs font-mono focus:ring-primary focus:border-primary outline-none shadow-sm" placeholder='const firebaseConfig = {
-  apiKey: "AIzaSy...",
-  authDomain: "tu-proyecto.firebaseapp.com",
-  projectId: "tu-proyecto",
-  storageBucket: "...",
-  messagingSenderId: "...",
-  appId: "..."
-};'></textarea>
-            <button onclick="Controllers.saveFirebaseConfig()" class="w-full bg-primary text-white font-bold py-5 rounded-2xl shadow-xl hover:brightness-110 active:scale-95 transition-all outline-none text-base">
-                Conectar con Google Cloud
-            </button>
-        </div>
-    </div>
-    
+
     <!-- TopBar Global (Siempre visible en Sub-Páginas) -->
     <header class="fixed top-0 w-full z-[60] bg-white/90 backdrop-blur-md border-b border-gray-100 h-16 flex items-center justify-between px-4 sm:px-6 transition-all hidden" id="top-bar">
         <div class="flex items-center gap-2 sm:gap-3">
